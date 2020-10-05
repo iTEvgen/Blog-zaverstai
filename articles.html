@@ -9,127 +9,153 @@
 </head>
 <body>
   <header class="page-header">
-    <nav class="">
-      <a class=""><img src="" alt="Anna Sweet"></a>
-      <ul class="">
-        <li class=""><a href="#">Статьи</a></li>
-        <li class=""><a href="#">Обо мне</a></li>
-        <li class=""><a href="#">Портфолио</a></li>
-        <li class=""><a href="#">Написать мне</a></li>
-      </ul>
-    </nav>
+    <div class="wrapper">
+      <nav class="heade-nav">
+        <a class="heade-nav__logo"><img src="" alt="Anna Sweet"></a>
+        <ul class="main-nav__list">
+          <li class="main-nav__items"><a class="main-nav__item" href="#">Статьи</a></li>
+          <li class="main-nav__items"><a class="main-nav__item" href="#">Обо мне</a></li>
+          <li class="main-nav__items"><a class="main-nav__item" href="#">Портфолио</a></li>
+          <li class="main-nav__items"><a class="main-nav__item" href="#">Написать мне</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main>
-    <h1 class="">Страница с статьями сайта личного блока Анны Свит</h1>
-    <section class="article">
-      <header>
-        <h2>Как себя мотивировать</h2>
-        <div>
-          <p>Теги:&nbsp;<span>путешествия, друзья</span></p>
-          <time datetime="2020-09-29">29.09.2020</time>
-        </div>
-      </header>
-      <div>
-        <p>Расскажу о биопсихологической теории личности Джеффри Грея, которая помогла мне разобраться
-          в работе мотивационных стимулов. Узнала я о ней из книги «Воля и самоконтроль.
-          Как гены и мозг мешают нам бороться с соблазнами» Ирины Якутенко.
-        </p>
-        <p>Согласно этой теории, человеческое поведение контролируют две системы: BAS (Behavior Activation System)
-           и BIS (Behavior Inhibition System), каждая из них обусловлена генетически. Грей использовал её для понимания того,
-           как вознаграждение или наказание связаны с беспокойством и импульсивностью. Самое интересное, что активность этих
-           систем у людей различна. Зная, какая из них доминирует, можно понять, какие стимулы использовать для эффективной
-           мотивации.
-        </p>
-        <figure>
-          <img src="" alt="">
-          <figcaption>
-            <small>Моё поведение регулируется больше BAS, поэтому при планировании целей я всегда использую
-              позитивный стимул.
-            </small>
-          </figcaption>
-        </figure>
-        <p>BAS (Behavior Activation System) работает на ощущение позитивных эмоций. Мотивация людей, чье поведение в основном
-           определяется этой системой, направлена на получение вознаграждения. Они стремятся получить одобрение и награду
-           за свои действия. Такие люди более мотивированы в учебе и развитии разных навыков. Однако носители активной
-           BAS склонны к импульсивности и желанию немедленного вознаграждения, что может мешать долгосрочной работе.
-           BIS (Behavior Inhibition System) ответственна за избегающее поведение. Люди с этой активной системой мотивируются
-           стремлением избежать проблем. Они более чувствительны к наказанию и новому опыту, а также стремятся избежать
-           ситуаций, когда чувствуют, что могут потерпеть неудачу.
-        </p>
-        <p>Определив, к какому типу относится поведение, вы узнаете, какие стимулы использовать для достижения поставленной цели.
-          Например, я решила выучить английский — само изучение не является целью, поэтому нужно правильно её сформулировать.
-          Если моё поведение регулируется BAS, мне нужно выбрать своей конечной целью какую-то награду: например, если я
-          выучу английский, то смогу смотреть фильмы в оригинале. Если же я склонна к BIS поведению, целью нужно выбрать
-          избежание проблем: если я заговорю на английском, то не потеряюсь в новой стране. И это можно использовать в
-          различных сферах жизни.
-        </p>
-      </div>
-      <footer>
-        <div>
-          <a href="#">
-            <div></div>
-            <span>16</span>
-            <span>Нравится</span>
-          </a>
-          <ul>
-            <li><a href="#"><span>Твиттер</span></a></li>
-            <li><a href="#"><span>фейсбук</span></a></li>
-            <li><a href="#"><span>Вконтакте</span></a></li>
-          </ul>
-        </div>
-        <a href="">Ко всем статьям</a>
-      </footer>
-    </section>
-    <section class="user-comments">
-      <h2>Комментарии наших читателей </h2>
-      <ul>
-        <li>
-          <img src="" alt="На аватарке Иван Петров">
-          <blockquote>
-            <cite>Иван Петров</cite>
-            <p>Отличная статья! Спасибо.</p>
-          </blockquote>
-        </li>
-        <li>
-          <blockquote>
-            <cite>Ксения Ксения</cite>
-            <p>Отличный текст, добавила в закладки.</p>
-          </blockquote>
-        </li>
-        <li>
-          <blockquote>
-            <cite>Иван Иванов</cite>
-            <p>Основательный материал! Можешь посоветовать какие-то книги на эту тему?</p>
-          </blockquote>
-        </li>
-      </ul>
-      <form action="" method="GET">
-        <fieldset>
-          <legend>Оставить комментарии</legend>
-          <div>
-            <div>
-              <p>
-                <label for="id-comment-name">Имя</label>
-                <input id="id-comment-name" type="text" name="comment-name">
-              </p>
-              <p>
-                <label for="id-comment-email">Почта</label>
-                <input id="id-comment-email" type="email" name="comment-email">
-              </p>
-              <button type="button">Отправить</button>
-            </div>
-            <textarea name="comments-user"cols="30" rows="10" placeholder="Написать комментарий..."></textarea>
+    <h1 class="visually-hidden">Страница с статьями сайта личного блока Анны Свит</h1>
+    <div class="wrapper">
+      <section class="article">
+        <header>
+          <h2 class="artical__title">Как себя мотивировать</h2>
+          <div class="artical__layout-meta">
+            <p>Теги:&nbsp;<span>путешествия, друзья</span></p>
+            <time datetime="2020-09-29">29.09.2020</time>
           </div>
-        </fieldset>
-      </form>
-    </section>
+        </header>
+        <div class="article__layuot article__item">
+          <p>Расскажу о биопсихологической теории личности Джеффри Грея, которая помогла мне разобраться
+            в работе мотивационных стимулов. Узнала я о ней из книги «Воля и самоконтроль.
+            Как гены и мозг мешают нам бороться с соблазнами» Ирины Якутенко.
+          </p>
+          <p>Согласно этой теории, человеческое поведение контролируют две системы: BAS (Behavior Activation System)
+             и BIS (Behavior Inhibition System), каждая из них обусловлена генетически. Грей использовал её для понимания того,
+             как вознаграждение или наказание связаны с беспокойством и импульсивностью. Самое интересное, что активность этих
+             систем у людей различна. Зная, какая из них доминирует, можно понять, какие стимулы использовать для эффективной
+             мотивации.
+          </p>
+          <figure class="article__image">
+            <img src="" alt="">
+            <figcaption class="article__image-desk">
+              <small>Моё поведение регулируется больше BAS, поэтому при планировании целей я всегда использую
+                позитивный стимул.
+              </small>
+            </figcaption>
+          </figure>
+          <p>BAS (Behavior Activation System) работает на ощущение позитивных эмоций. Мотивация людей, чье поведение в основном
+             определяется этой системой, направлена на получение вознаграждения. Они стремятся получить одобрение и награду
+             за свои действия. Такие люди более мотивированы в учебе и развитии разных навыков. Однако носители активной
+             BAS склонны к импульсивности и желанию немедленного вознаграждения, что может мешать долгосрочной работе.
+             BIS (Behavior Inhibition System) ответственна за избегающее поведение. Люди с этой активной системой мотивируются
+             стремлением избежать проблем. Они более чувствительны к наказанию и новому опыту, а также стремятся избежать
+             ситуаций, когда чувствуют, что могут потерпеть неудачу.
+          </p>
+          <p>Определив, к какому типу относится поведение, вы узнаете, какие стимулы использовать для достижения поставленной цели.
+            Например, я решила выучить английский — само изучение не является целью, поэтому нужно правильно её сформулировать.
+            Если моё поведение регулируется BAS, мне нужно выбрать своей конечной целью какую-то награду: например, если я
+            выучу английский, то смогу смотреть фильмы в оригинале. Если же я склонна к BIS поведению, целью нужно выбрать
+            избежание проблем: если я заговорю на английском, то не потеряюсь в новой стране. И это можно использовать в
+            различных сферах жизни.
+          </p>
+        </div>
+        <footer class="article-footer">
+          <div class="article__footer-layout">
+            <a class="article__footer-link" href="#">
+              <div class="article__footer-icon"></div>
+              <span class="article__footer-text">16</span>
+              <span class="visually-hidden">Нравится</span>
+            </a>
+            <ul class="article__footer-list">
+              <li class="article__footer-item">
+                <a class="article__footer-link" href="#">
+                  <span>Твиттер</span>
+                </a>
+              </li>
+              <li class="article__footer-item">
+                <a class="article__footer-link" href="#">
+                  <span>фейсбук</span>
+                </a>
+              </li>
+              <li class="article__footer-item">
+                <a class="article__footer-link" href="#">
+                  <span>Вконтакте</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a class="article__link" href="#">Ко всем статьям</a>
+        </footer>
+      </section>
+      <section class="user-comments">
+        <h2 class="visually-hidden">Комментарии наших читателей </h2>
+        <ul class="user-comments__list">
+          <li class="user-comments__item">
+            <blockquote >
+              <img src="img/avatar-comment@1x.jpg" alt="На аватарке Иван Петров">
+              <cite class="user-comments__autor">Иван Петров</cite>
+              <p class=" user-comments__text">Отличная статья! Спасибо.</p>
+            </blockquote>
+          </li>
+          <li class="user-comments__item">
+            <blockquote>
+              <img src="" alt="На аватарке Иван Петров">
+              <cite class="user-comments__autor">Ксения Ксения</cite>
+              <p class=" user-comments__text">Отличный текст, добавила в закладки.</p>
+            </blockquote>
+          </li>
+          <li class="user-comments__item">
+            <blockquote>
+              <img src="" alt="На аватарке Иван Петров">
+              <cite class="user-comments__autor">Иван Иванов</cite>
+              <p class=" user-comments__text">Основательный материал! Можешь посоветовать какие-то книги на эту тему?</p>
+            </blockquote>
+          </li>
+        </ul>
+        <form class="user-comments__form form-comments" action="" method="GET">
+          <fieldset>
+            <legend class="form-comments__title">Оставить комментарии</legend>
+            <div class="form-comments__layout">
+              <div class="form-comments__layout-elem">
+                <p class="form-comments__element">
+                  <label for="id-comment-name">Имя</label>
+                  <input id="id-comment-name" type="text" name="comment-name">
+                </p>
+                <p class="form-comments__element">
+                  <label for="id-comment-email">Почта</label>
+                  <input id="id-comment-email" type="email" name="comment-email">
+                </p>
+                <button type="button">Отправить</button>
+              </div>
+              <textarea name="comments-user" cols="30" rows="10" placeholder="Написать комментарий..."></textarea>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </div>
   </main>
   <footer class="main-footer">
-    <ul>
-      <li><a href="#">Вк</a></li>
-      <li><a href="#">Телеграм</a></li>
-      <li><a href="#">Инстаграм</a></li>
-      <li><a href="#">Твиттер</a></li>
+    <ul class="wrapper main-footer__list">
+      <li class="main-footer__items">
+        <a class="main-footer__link" href="#"><span class="">Вк</span></a>
+      </li>
+      <li class="main-footer__items">
+        <a class="main-footer__link" href="#"><span class="">Телеграм</span></a>
+      </li>
+      <li class="main-footer__items">
+        <a class="main-footer__link" href="#"><span class="">Инстаграм</span></a>
+      </li>
+      <li class="main-footer__items">
+        <a class="main-footer__link" href="#"><span class="">Твиттер</span></a>
+      </li>
     </ul>
   </footer>
 </body>

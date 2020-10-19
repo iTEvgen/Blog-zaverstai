@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/spectralsc-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main-css.css">
     <title>Статьи</title>
@@ -14,16 +16,16 @@
         <a class="heade-nav__logo" href="index.html"><img src="img/logo.svg" alt="Anna Sweet"></a>
         <ul class="main-nav__list">
           <li class="main-nav__items">
-            <a class="main-nav__item" href="index.html#articles">Статьи</a>
+            <a class="main-nav__item" href="index.html#articles" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта с статьями">Статьи</a>
           </li>
           <li class="main-nav__items">
-            <a class="main-nav__item" href="index.html#about-me">Обо мне</a>
+            <a class="main-nav__item" href="index.html#about-me" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта обо мне">Обо мне</a>
           </li>
           <li class="main-nav__items">
-            <a class="main-nav__item" href="index.html#portfolio">Портфолио</a>
+            <a class="main-nav__item" href="index.html#portfolio" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта Портфолио">Портфолио</a>
           </li>
           <li class="main-nav__items">
-            <a class="main-nav__item" href="index.html#feedback">Написать мне</a>
+            <a class="main-nav__item" href="index.html#feedback" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта с формой написать мне">Написать мне</a>
           </li>
         </ul>
       </nav>
@@ -34,13 +36,13 @@
     <div class="wrapper">
       <section class="article">
         <header>
-          <h2 class="artical__title">Как себя мотивировать</h2>
+          <h2 class="header artical__title">Как себя мотивировать</h2>
           <div class="artical__layout-meta">
             <p>Теги:&nbsp;<span>путешествия, друзья</span></p>
             <time datetime="2020-09-29">29.09.2020</time>
           </div>
         </header>
-        <div class="article__layuot article__item">
+        <div class="article__layuot">
           <p>Расскажу о биопсихологической теории личности Джеффри Грея, которая помогла мне разобраться
             в работе мотивационных стимулов. Узнала я о ней из книги «Воля и самоконтроль.
             Как гены и мозг мешают нам бороться с соблазнами» Ирины Якутенко.
@@ -81,7 +83,7 @@
         <footer class="article-footer">
           <div class="article__footer-layout">
             <a class="article__footer-link" href="#">
-              <svg class="article__footer-icon" width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="article__footer-icon" aria-hidden="true" role="presntation" focusable="false" width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M47.843 33.992c1.025-1.307 1.517-2.708
                   1.454-4.15-.063-1.59-.774-2.834-1.36-3.598.68-1.694.942-4.36-1.327-6.43-1.663-1.516-4.486-2.196-8.396-2.008-2.75.126-5.05.638-5.145.66h-.01c-.523.093-1.077.208-1.642.334-.042-.67.073-2.332
                   1.307-6.075 1.464-4.454 1.38-7.863-.272-10.142C30.717.188 27.946 0 27.13 0c-.784 0-1.505.324-2.018.92-1.16 1.349-1.024 3.837-.878 4.988-1.38
@@ -100,12 +102,12 @@
                   1.16 2.436.043.93-.397 1.882-1.306 2.823z" fill="#2E2F22"/>
               </svg>
               <span class="article__footer-text">16</span>
-              <span class="visually-hidden">Нравится</span>
+              <span class="visually-hidden">Лайков</span>
             </a>
             <ul class="article__footer-list">
               <li class="article__footer-item">
-                <a class="article__footer-link" href="https://twitter.com" target="_blank">
-                  <svg width="50" height="42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="article__footer-link" href="https://twitter.com" target="_blank" aria-label="Моя страничка в социальной сети в твиттер" title="Твиттер">
+                  <svg role="img" width="50" height="42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M50 6.055c-3.145.145-3.077.133-3.432.163L48.43.898s-5.815 2.14-7.289
                       2.522c-3.87-3.48-9.625-3.633-13.739-1.105-3.368 2.071-5.177
                       5.628-4.574 9.785-6.556-.91-12.08-4.018-16.441-9.257l-1.38-1.657-1.03 1.893c-1.303
@@ -127,8 +129,8 @@
                 </a>
               </li>
               <li class="article__footer-item">
-                <a class="article__footer-link" href="https://www.facebook.com/" target="_blank">
-                  <svg width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="article__footer-link" href="https://www.facebook.com/" target="_blank" aria-label="Моя страничка в социальной сети в фейсбук" title="фейсбук">
+                  <svg role="img" width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.324 50h16.309V32.227h-5.86v-5.86h5.86v-7.324c0-4.039 3.285-7.324 7.324-7.324h7.324v5.86h-5.86a2.933
                     2.933 0 00-2.929 2.929v5.86h8.525l-.977 5.859h-7.548V50h13.184C46.714 50 50 46.714 50 42.676V7.324C50 3.286
                     46.714 0 42.676 0H7.324C3.286 0 0 3.286 0 7.324v35.352C0 46.714 3.286 50 7.324 50zM2.93 7.324A4.4 4.4 0 017.324
@@ -139,8 +141,8 @@
                 </a>
               </li>
               <li class="article__footer-item">
-                <a class="article__footer-link" href="https://vk.com" target="_blank">
-                  <svg width="50" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="article__footer-link" href="https://vk.com" target="_blank" aria-label="Моя страничка в социальной сети в контакте" title="Вконтакте">
+                  <svg role="img" width="50" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M44.506 19.893l-.027-.025c-.427-.394-1.735-1.667-2.176-2.223-.517-.694-.398-1.149-.01-1.83.49-.861
                       1.472-2.182 2.512-3.58 3.33-4.478 5.479-7.578 5.036-9.78l-.238-1.176-12.296.006c-.043.116-.685
                       2.934-3.392 7.734-1.964 3.48-3.252 4.573-3.705 4.766l-.07-.02c-.148-.183-.406-.675-.512-1.944-.11-1.328-.012-2.937.082-4.493.111-1.824.207-3.4-.022-4.527L29.315.965c-.452-.072-2.104-.71-6.707-.758-3.985-.04-5.156.535-5.731
@@ -164,8 +166,8 @@
               </li>
             </ul>
           </div>
-          <a class="article__link" href="#">Ко всем статьям
-            <svg width="64" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a class="article__link" href="index.html#articles" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта все статьи">Ко всем статьям
+            <svg aria-hidden="true" role="presntation" focusable="false" width="64" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M62.78 8.707a1 1 0 000-1.414L56.416.929a1 1 0 10-1.414 1.414L60.657 8l-5.657 5.657a1 1 0
                 101.415 1.414l6.364-6.364zM0 9h62.072V7H0v2z" fill="#2E2F22"/>
             </svg>
@@ -206,22 +208,22 @@
             </blockquote>
           </li>
         </ul>
-        <form class="user-comments__form form-comments" action="" method="GET">
+        <form class="user-comments__form form-comments" action="https://echo.htmlacademy.ru" method="GET">
           <fieldset>
-            <legend class="form-comments__title">Оставить комментарии</legend>
+            <legend class="form-comments__title">Оставить комментарий</legend>
             <div class="form-comments__layout">
               <div class="form-comments__layout-elem">
                 <p class="form-comments__element">
                   <label for="id-comment-name">Имя</label>
-                  <input id="id-comment-name" type="text" name="comment-name">
+                  <input id="id-comment-name" type="text" name="comment-name" placeholder="Иван Иванов" required pattern="([A-Za-zА-Яа-яЁё]{2,20})+\s([A-Za-zА-Яа-яЁё]{2,20})">
                 </p>
                 <p class="form-comments__element">
                   <label for="id-comment-email">Почта</label>
-                  <input id="id-comment-email" type="email" name="comment-email">
+                  <input id="id-comment-email" type="email" name="comment-email" required placeholder="google@gmail.com">
                 </p>
-                <button class="button form-comments__button" type="button">Отправить</button>
+                <button class="button form-comments__button" type="submit">Отправить</button>
               </div>
-              <textarea name="comments-user" cols="30" rows="10" placeholder="Написать комментарий..."></textarea>
+              <textarea name="comments-user" cols="30" rows="5" placeholder="Написать комментарий..."></textarea>
             </div>
           </fieldset>
         </form>
@@ -231,16 +233,16 @@
   <footer class="main-footer">
     <ul class="wrapper main-footer__list">
       <li class="main-footer__items">
-        <a class="main-footer__link" href="https://vk.com" target="_blank"><span class="">Вк</span></a>
+        <a class="main-footer__link" href="https://vk.com" aria-label="Моя страничка в социальной сети в контакте" target="_blank"><span class="">Вк</span></a>
       </li>
       <li class="main-footer__items">
-        <a class="main-footer__link" href="https://web.telegram.org/#/login" target="_blank"><span class="">Телеграм</span></a>
+        <a class="main-footer__link" href="https://web.telegram.org/#/login" aria-label="Моя страничка в социальной сети в телеграм" target="_blank"><span class="">Телеграм</span></a>
       </li>
       <li class="main-footer__items">
-        <a class="main-footer__link" href="https://www.instagram.com/" target="_blank"><span class="">Инстаграм</span></a>
+        <a class="main-footer__link" href="https://www.instagram.com/" aria-label="Моя страничка в социальной сети в инстаграм" target="_blank"><span class="">Инстаграм</span></a>
       </li>
       <li class="main-footer__items">
-        <a class="main-footer__link" href="https://twitter.com" target="_blank"><span class="">Твиттер</span></a>
+        <a class="main-footer__link" href="https://twitter.com" aria-label="Моя страничка в социальной сети в твиттер" target="_blank"><span class="">Твиттер</span></a>
       </li>
     </ul>
   </footer>

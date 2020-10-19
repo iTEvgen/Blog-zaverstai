@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/spectralsc-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main-css.css">
     <title>Личный Блог</title>
@@ -14,16 +16,16 @@
         <a class="heade-nav__logo"><img src="img/logo.svg" alt="Anna Sweet"></a>
         <ul class="main-nav__list">
           <li class="main-nav__items">
-            <a class="main-nav__item" href="#articles">Статьи</a>
+            <a class="main-nav__item" href="#articles" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта с статьями">Статьи</a>
           </li>
           <li class="main-nav__items">
-            <a class="main-nav__item" href="#about-me">Обо мне</a>
+            <a class="main-nav__item" href="#about-me" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта обо мне">Обо мне</a>
           </li>
           <li class="main-nav__items">
-            <a class="main-nav__item" href="#portfolio">Портфолио</a>
+            <a class="main-nav__item" href="#portfolio" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта Портфолио">Портфолио</a>
           </li>
           <li class="main-nav__items">
-            <a class="main-nav__item" href="#feedback">Написать мне</a>
+            <a class="main-nav__item" href="#feedback" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта с формой написать мне">Написать мне</a>
           </li>
         </ul>
       </nav>
@@ -36,20 +38,20 @@
          <div class="articles__layout-head">
            <h2 id="articles" class="header header-article">Все статьи</h2>
            <ul class="articles__theme theme__lists">
-             <li class="theme__items">Выбрать тему
+             <li class="theme__items" tabindex="0"><a aria-label="Фильтр по категориям статей">Выбрать тему</a>
                <ul class="theme__list">
-                 <li class="theme__item"><a href="#">Город</a></li>
-                 <li class="theme__item"><a href="#">Книги</a></li>
-                 <li class="theme__item"><a href="#">Путешествия</a></li>
-                 <li class="theme__item"><a href="#">Рецепты</a></li>
-                 <li class="theme__item"><a href="#">Фотографии</a></li>
+                 <li class="theme__item"><a href="#" aria-label="Все статьи с категорией город">Город</a></li>
+                 <li class="theme__item"><a href="#" aria-label="Все статьи с категорией книги">Книги</a></li>
+                 <li class="theme__item"><a href="#" aria-label="Все статьи с категорией путешествия">Путешествия</a></li>
+                 <li class="theme__item"><a href="#" aria-label="Все статьи с категорией рецепты">Рецепты</a></li>
+                 <li class="theme__item"><a href="#" aria-label="Все статьи с категорией фотографии">Фотографии</a></li>
                </ul>
              </li>
            </ul>
          </div>
         <ul class="articles article__list">
           <li class="article__items">
-            <a class="article__item" href="articles.html">
+            <a class="article__item" href="articles.html" arial-label="Перейдя по ссылка, вы попадете на статью Путешествие в Берлин в августе">
               <picture>
                 <source type="image/webp" srcset="img/image-1@1x.webp 1x, img/image-1@2x.webp 2x">
                 <img class="article__img" src="img/image-1@1x.jpg" srcset="img/image-1@2x.jpg 2x" alt="">
@@ -63,13 +65,13 @@
             </a>
           </li>
           <li class="article__items">
-            <a class="article__item" href="articles.html">
+            <a class="article__item" href="articles.html" arial-label="Перейдя по ссылка, вы попадете на статью Где выпить колдбрю в Москве">
               <picture>
                 <source type="image/webp" srcset="img/image-2@1x.webp 1x, img/image-2@2x.webp 2x">
                 <img class="article__img" src="img/image-2@1x.jpg" srcset="img/image-2@2x.jpg 2x" alt="">
               </picture>
               <h3 class="article__header">Где выпить колдбрю в Москве</h3>
-              <p class="article__text">Собрала для вас список любимых кофеен, где подают лучший летний напиток.</p>
+              <p class="article__text">Собрала для вас список любимых кофеен,<br> где подают лучший летний напиток.</p>
               <div class="article__layout">
                <p>Теги:&nbsp;<span>город</span></p>
                <time datetime="2020-07-24">24.07.2020</time>
@@ -77,7 +79,7 @@
             </a>
           </li>
           <li class="article__items">
-            <a class="article__item" href="articles.html">
+            <a class="article__item" href="articles.html" arial-label="Перейдя по ссылка, вы попадете на статью Прочитано: книжные рекомендации">
               <picture>
                 <source type="image/webp" srcset="img/image-3@1x.webp 1x, img/image-3@2x.webp 2x">
                 <img class="article__img" src="img/image-3@1x.jpg" srcset="img/image-3@2x.jpg 2x" alt="">
@@ -91,7 +93,7 @@
             </a>
           </li>
           <li class="article__items article__items--big">
-            <a class="article__item" href="articles.html">
+            <a class="article__item" href="articles.html" arial-label="Перейдя по ссылка, вы попадете на статью Снимки на плёнку">
               <picture>
                 <source type="image/webp" srcset="img/image-4@1x.webp 1x, img/image-4@2x.webp 2x">
                 <img class="article__img article__img--big" src="img/image-4@1x.jpg" srcset="img/image-4@2x.jpg 2x" alt="">
@@ -107,7 +109,7 @@
             </a>
           </li>
           <li class="article__items article__items--big">
-            <a class="article__item" href="articles.html">
+            <a class="article__item" href="articles.html" arial-label="Перейдя по ссылка, вы попадете на статью Домашний чизкейк">
               <picture>
                 <source type="image/webp" srcset="img/image-5@1x.webp 1x, img/image-5@2x.webp 2x">
                 <img class="article__img article__img--big" src="img/image-5@1x.jpg" srcset="img/image-5@2x.jpg 2x" alt="">
@@ -144,7 +146,7 @@
               Ниже размещены несколько моих лучших рабочих текстов. Буду рада новым сотрудничествам!
             </p>
             <p>Если вы хотите написать мне — это можно сделать в соцсетях или
-              через <a class="about-me__link-text" href="">форму</a>. Всегда приятно услышать обратную
+              через <a class="about-me__link-text" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта с формой написать мне" href="#feedback">форму</a>. Всегда приятно услышать обратную
               связь от читателей и познакомиться поближе.
             </p>
             <p>Приятного чтения!</p>
@@ -161,14 +163,14 @@
         <div class="partfolio__layout">
           <ul class="partfolio__list">
             <li class="partfolio__items">
-              <a class="partfolio__item" href="">
+              <a class="partfolio__item" href="#" aria-label="Перейдя по этой ссылке, вы попадете на мою работу для HTML Academy">
                 <h3>Блог HTML Academy</h3>
                 <p class="partfolio__slogon"><b>&laquo;Как учиться продуктивно&raquo;</b></p>
                 <p>Про основные методы обучения,<br> которые помогут быстро и надолго<br> запомнить информацию.</p>
               </a>
             </li>
             <li class="partfolio__items">
-              <a class="partfolio__item" href="">
+              <a class="partfolio__item" href="#" aria-label="Перейдя по этой ссылке, вы попадете на мою работу для Журнала LNK">
                 <h3>Журнал &laquo;LNK&raquo;</h3>
                 <p class="partfolio__slogon"><b>&laquo;Зачем поцели нужны человеку?<br> И какие они бывают&raquo;</b></p>
                 <p>Поцелуи — повсеместная ежедневная практика. Но зачем люди целуются?<br>
@@ -177,39 +179,39 @@
               </a>
             </li>
             <li class="partfolio__items">
-              <a class="partfolio__item" href="">
+              <a class="partfolio__item" href="#" aria-label="Перейдя по этой ссылке, вы попадете на мою работу для Журнала Т — Л">
                 <h3>Журнал &laquo;Т — Л&raquo;</h3>
                 <p class="partfolio__slogon"><b>&laquo;Советы по эффективной<br> удалённой работе&raquo;</b></p>
                 <p>Поделилась лайфхаками, которые помогают мне работать продуктивно из дома.</p>
               </a>
             </li>
           </ul>
-          <button class="button partfolio__button" type="button">Показать все</button>
+          <button class="button partfolio__button" type="button">Показать еще</button>
         </div>
        </div>
      </section>
      <section class="feedback">
        <h2 id="feedback" class=" header header-feedback">Написать мне</h2>
        <div class="wrapper feedback__width">
-        <form class="feedback__form" action="" method="GET">
+        <form class="feedback__form" action="https://echo.htmlacademy.ru" method="GET">
           <fieldset class="feedback__form-wrapp">
             <legend class="feedback__form-title visually-hidden">обратная связь</legend>
             <div class="feedback__layout">
               <div class="feedback__layout-elm">
                 <p class="feedback__form-elment">
                   <label for="id-name">Ваше имя</label>
-                  <input id="id-name" type="text" name="name" placeholder="Иван Иванов">
+                  <input id="id-name" type="text" name="name" placeholder="Иван Иванов" required pattern="([A-Za-zА-Яа-яЁё]{2,20})+\s([A-Za-zА-Яа-яЁё]{2,20})">
                 </p>
                 <p class="feedback__form-elment">
                   <label for="id-email">Email</label>
-                  <input id="id-email" type="email" name="e-mail" placeholder="google@gmail.com">
+                  <input id="id-email" type="email" name="e-mail" placeholder="google@gmail.com" required>
                 </p>
                 <p class="feedback__form-elment feedback__form-elment--messege">
                   <label for="id-message">Сообщение</label>
                   <textarea id="id-message" placeholder="Напишите здесь ваше сообщение."></textarea>
                 </p>
               </div>
-              <button class="button feedback__button" type="button">отправить</button>
+              <button class="button feedback__button" type="submit">отправить</button>
             </div>
           </fieldset>
         </form>
@@ -219,16 +221,16 @@
   <footer class="main-footer">
     <ul class="wrapper main-footer__list">
       <li class="main-footer__items">
-        <a class="main-footer__link" href="https://vk.com" target="_blank"><span class="">Вк</span></a>
+        <a class="main-footer__link" href="https://vk.com" target="_blank" aria-label="Моя страничка в социальной сети в контакте">Вк</a>
       </li>
       <li class="main-footer__items">
-        <a class="main-footer__link" href="https://web.telegram.org/#/login" target="_blank"><span class="">Телеграм</span></a>
+        <a class="main-footer__link" href="https://web.telegram.org/#/login" aria-label="Моя страничка в социальной сети в телеграм" target="_blank">Телеграм</a>
       </li>
       <li class="main-footer__items">
-        <a class="main-footer__link" href="https://www.instagram.com/" target="_blank"><span class="">Инстаграм</span></a>
+        <a class="main-footer__link" href="https://www.instagram.com/" aria-label="Моя страничка в социальной сети в инстаграм" target="_blank">Инстаграм</a>
       </li>
       <li class="main-footer__items">
-        <a class="main-footer__link" href="https://twitter.com" target="_blank"><span class="">Твиттер</span></a>
+        <a class="main-footer__link" href="https://twitter.com" aria-label="Моя страничка в социальной сети в твиттер" target="_blank">Твиттер</a>
       </li>
     </ul>
   </footer>

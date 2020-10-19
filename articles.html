@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="fonts/opensans-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/spectralsc-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main-css.css">
     <title>Статьи</title>
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header page-header--articles">
     <div class="wrapper">
       <nav class="heade-nav">
-        <a class="heade-nav__logo"><img src="" alt="Anna Sweet"></a>
+        <a class="heade-nav__logo" href="index.html"><img src="img/logo.svg" alt="Anna Sweet"></a>
         <ul class="main-nav__list">
-          <li class="main-nav__items"><a class="main-nav__item" href="#">Статьи</a></li>
-          <li class="main-nav__items"><a class="main-nav__item" href="#">Обо мне</a></li>
-          <li class="main-nav__items"><a class="main-nav__item" href="#">Портфолио</a></li>
-          <li class="main-nav__items"><a class="main-nav__item" href="#">Написать мне</a></li>
+          <li class="main-nav__items">
+            <a class="main-nav__item" href="index.html#articles" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта с статьями">Статьи</a>
+          </li>
+          <li class="main-nav__items">
+            <a class="main-nav__item" href="index.html#about-me" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта обо мне">Обо мне</a>
+          </li>
+          <li class="main-nav__items">
+            <a class="main-nav__item" href="index.html#portfolio" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта Портфолио">Портфолио</a>
+          </li>
+          <li class="main-nav__items">
+            <a class="main-nav__item" href="index.html#feedback" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта с формой написать мне">Написать мне</a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -26,13 +36,13 @@
     <div class="wrapper">
       <section class="article">
         <header>
-          <h2 class="artical__title">Как себя мотивировать</h2>
+          <h2 class="header artical__title">Как себя мотивировать</h2>
           <div class="artical__layout-meta">
             <p>Теги:&nbsp;<span>путешествия, друзья</span></p>
             <time datetime="2020-09-29">29.09.2020</time>
           </div>
         </header>
-        <div class="article__layuot article__item">
+        <div class="article__layuot">
           <p>Расскажу о биопсихологической теории личности Джеффри Грея, которая помогла мне разобраться
             в работе мотивационных стимулов. Узнала я о ней из книги «Воля и самоконтроль.
             Как гены и мозг мешают нам бороться с соблазнами» Ирины Якутенко.
@@ -44,7 +54,10 @@
              мотивации.
           </p>
           <figure class="article__image">
-            <img src="" alt="">
+            <picture>
+              <source type="image/webp" srcset="img/image-10@1x.webp 1x, img/image-10@2x.webp 2x">
+              <img src="img/image-10@1x.jpg" srcset="img/image-10@2x.jpg 2x" alt="">
+            </picture>
             <figcaption class="article__image-desk">
               <small>Моё поведение регулируется больше BAS, поэтому при планировании целей я всегда использую
                 позитивный стимул.
@@ -70,72 +83,147 @@
         <footer class="article-footer">
           <div class="article__footer-layout">
             <a class="article__footer-link" href="#">
-              <div class="article__footer-icon"></div>
+              <svg class="article__footer-icon" aria-hidden="true" role="presntation" focusable="false" width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M47.843 33.992c1.025-1.307 1.517-2.708
+                  1.454-4.15-.063-1.59-.774-2.834-1.36-3.598.68-1.694.942-4.36-1.327-6.43-1.663-1.516-4.486-2.196-8.396-2.008-2.75.126-5.05.638-5.145.66h-.01c-.523.093-1.077.208-1.642.334-.042-.67.073-2.332
+                  1.307-6.075 1.464-4.454 1.38-7.863-.272-10.142C30.717.188 27.946 0 27.13 0c-.784 0-1.505.324-2.018.92-1.16 1.349-1.024 3.837-.878 4.988-1.38
+                  3.7-5.249 12.777-8.521 15.296-.063.042-.115.095-.168.147a11.232 11.232 0 00-2.05 3.074 4.314 4.314 0 00-2.07-.523H5.049a4.353 4.353 0 00-4.35
+                  4.35v16.99a4.353 4.353 0 004.35 4.35h6.378a4.34 4.34 0 002.51-.794l2.456.292c.377.053 7.068.9
+                  13.938.764 1.244.094 2.415.146 3.503.146 1.871 0 3.502-.146 4.862-.44 3.2-.679 5.384-2.038
+                  6.493-4.035.847-1.527.847-3.043.71-4.005 2.081-1.882 2.447-3.963 2.374-5.426a7.064 7.064 0
+                  00-.428-2.102zM5.048 46.77c-.847 0-1.527-.69-1.527-1.526V28.24c0-.847.69-1.526 1.527-1.526h6.378c.847 0 1.526.69 1.526 1.526v16.991c0
+                  .847-.69 1.527-1.526 1.527H5.048v.01zm40.119-14c-.44.46-.523 1.16-.188 1.704 0 .01.428.742.48
+                  1.746.074 1.37-.585 2.583-1.965 3.618a1.425 1.425 0 00-.481 1.61c0 .01.45 1.39-.282
+                  2.698-.701 1.254-2.259 2.154-4.622 2.655-1.892.408-4.465.482-7.622.23h-.147c-6.723.147-13.52-.731-13.592-.742h-.01l-1.057-.125c.063-.293.094-.607.094-.92V28.24c0-.45-.073-.888-.198-1.296.188-.7.71-2.259 1.944-3.587
+                  4.695-3.722 9.285-16.28 9.484-16.823.084-.22.105-.46.063-.7-.178-1.172-.115-2.604.136-3.033.554.01 2.049.167 2.948 1.412
+                  1.067 1.474 1.025 4.109-.125 7.601-1.757 5.322-1.903 8.124-.513 9.358.69.617 1.61.648
+                  2.28.408a29.499 29.499 0 011.819-.366c.042-.01.094-.02.136-.031 3.21-.7 8.96-1.13 10.958.69
+                  1.694 1.547.491 3.597.355 3.816-.387.586-.272 1.349.251 1.82.01.01 1.108 1.045
+                  1.16 2.436.043.93-.397 1.882-1.306 2.823z" fill="#2E2F22"/>
+              </svg>
               <span class="article__footer-text">16</span>
-              <span class="visually-hidden">Нравится</span>
+              <span class="visually-hidden">Лайков</span>
             </a>
             <ul class="article__footer-list">
               <li class="article__footer-item">
-                <a class="article__footer-link" href="#">
-                  <span>Твиттер</span>
+                <a class="article__footer-link" href="https://twitter.com" target="_blank" aria-label="Моя страничка в социальной сети в твиттер" title="Твиттер">
+                  <svg role="img" width="50" height="42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 6.055c-3.145.145-3.077.133-3.432.163L48.43.898s-5.815 2.14-7.289
+                      2.522c-3.87-3.48-9.625-3.633-13.739-1.105-3.368 2.071-5.177
+                      5.628-4.574 9.785-6.556-.91-12.08-4.018-16.441-9.257l-1.38-1.657-1.03 1.893c-1.303
+                      2.392-1.736 5.126-1.219 7.7a11.062 11.062 0 001.072 3.006l-1.183-.458-.14 1.977c-.143
+                      2.008.526 4.353 1.788 6.27.356.541.814 1.134 1.394 1.72l-.611-.095.746 2.266c.98 2.977
+                      3.017 5.28 5.661 6.56-2.64 1.12-4.773 1.835-8.279 2.988L0 36.068l2.962 1.62c1.13.617
+                      5.121 2.68 9.065 3.298 8.766 1.375 18.636.256 25.28-5.729 5.597-5.04 7.433-12.21
+                      7.052-19.67-.058-1.13.252-2.208.871-3.036 1.241-1.657 4.762-6.485 4.77-6.496zm-7.112
+                      4.741c-1.03 1.374-1.545 3.129-1.452 4.94.385 7.526-1.663 13.362-6.087 17.346-5.168
+                      4.655-13.503 6.481-22.868 5.012-1.697-.266-3.45-.861-4.9-1.456 2.94-1.011 5.209-1.912
+                      8.875-3.647l5.117-2.422-5.65-.362c-2.706-.173-4.96-1.485-6.345-3.614a10.14 10.14 0
+                      002.151-.358l5.388-1.501-5.433-1.33c-2.64-.647-4.145-2.227-4.943-3.439a8.287 8.287 0
+                      01-1.07-2.363c.544.146 1.18.25 2.203.351l5.03.498-3.985-3.108c-2.871-2.24-4.022-5.604-3.178-8.838C14.7
+                      15.8 25.22 15.1 26.28 15.345c-.233-2.263-.24-2.269-.3-2.484-1.357-4.794 1.616-7.228 2.956-8.052
+                      2.8-1.721 7.245-1.98 10.323.855.665.612 1.564.852 2.405.643a20.245 20.245 0 001.983-.602l-1.264
+                      3.607 1.613.002-1.108 1.482z" fill="#2E2F22"/>
+                  </svg>
+                  <span class="visually-hidden">Твиттер</span>
                 </a>
               </li>
               <li class="article__footer-item">
-                <a class="article__footer-link" href="#">
-                  <span>фейсбук</span>
+                <a class="article__footer-link" href="https://www.facebook.com/" target="_blank" aria-label="Моя страничка в социальной сети в фейсбук" title="фейсбук">
+                  <svg role="img" width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.324 50h16.309V32.227h-5.86v-5.86h5.86v-7.324c0-4.039 3.285-7.324 7.324-7.324h7.324v5.86h-5.86a2.933
+                    2.933 0 00-2.929 2.929v5.86h8.525l-.977 5.859h-7.548V50h13.184C46.714 50 50 46.714 50 42.676V7.324C50 3.286
+                    46.714 0 42.676 0H7.324C3.286 0 0 3.286 0 7.324v35.352C0 46.714 3.286 50 7.324 50zM2.93 7.324A4.4 4.4 0 017.324
+                    2.93h35.352a4.4 4.4 0 014.394 4.394v35.352a4.4 4.4 0 01-4.394 4.394H32.422V35.156h7.1l1.953-11.718h-9.053v-2.93h8.789V8.789H30.957c-5.654
+                    0-10.254 4.6-10.254 10.254v4.395h-5.86v11.718h5.86V47.07H7.324a4.4 4.4 0 01-4.394-4.394V7.324z" fill="#2E2F22"/>
+                  </svg>
+                  <span class="visually-hidden">фейсбук</span>
                 </a>
               </li>
               <li class="article__footer-item">
-                <a class="article__footer-link" href="#">
-                  <span>Вконтакте</span>
+                <a class="article__footer-link" href="https://vk.com" target="_blank" aria-label="Моя страничка в социальной сети в контакте" title="Вконтакте">
+                  <svg role="img" width="50" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M44.506 19.893l-.027-.025c-.427-.394-1.735-1.667-2.176-2.223-.517-.694-.398-1.149-.01-1.83.49-.861
+                      1.472-2.182 2.512-3.58 3.33-4.478 5.479-7.578 5.036-9.78l-.238-1.176-12.296.006c-.043.116-.685
+                      2.934-3.392 7.734-1.964 3.48-3.252 4.573-3.705 4.766l-.07-.02c-.148-.183-.406-.675-.512-1.944-.11-1.328-.012-2.937.082-4.493.111-1.824.207-3.4-.022-4.527L29.315.965c-.452-.072-2.104-.71-6.707-.758-3.985-.04-5.156.535-5.731
+                      1.042l-1.902 1.678 2.404.809c.915.308 1.218.663 1.467 2.423.163 1.148.248 3.076.073 4.798-.253 2.468-.857
+                      2.928-.888 2.952-.105-.035-.988-.422-2.52-3.663-1.064-2.248-1.997-4.907-2.678-6.85-.78-2.223-.64-1.75-1.035-2.8H-.098l.77
+                      1.991c3.21 8.31 6.154 14.799 10.095 19.46 4.353 5.149 9.764 7.845 17.053 7.845h1.464v-1.465c0-1.369.114-2.355.357-3.103.148-.455.345-.832.552-1.227.308-.581.608-.83.772-.867.15-.034.41.075.7.291.833.621
+                      1.494 1.437 2.194 2.3 1.009 1.246 2.053 2.535 3.709 3.378.904.461 2.563.694
+                      3.476.694h8.858l-.063-1.526c-.093-2.28-1.888-5.132-5.333-8.474zm-3.405
+                      7.07h-.024c-.63.01-1.83-.197-2.18-.374-1.1-.561-1.87-1.511-2.762-2.611-.782-.967-1.591-1.966-2.718-2.805-.91-.68-1.738-.878-2.395-.878-.262
+                      0-.498.031-.7.077-.763.172-1.854.72-2.72 2.36-.245.467-.523.995-.747 1.686-.236.723-.382 1.527-.452
+                      2.505-5.492-.312-9.778-2.485-13.4-6.768-3.366-3.982-6.014-9.552-8.819-16.63h5.589l.296.841c.734 2.095
+                      1.74 4.963 2.925 7.41 1.698 3.502 3.247 5.064 5.026 5.064.887 0 1.683-.376 2.302-1.088.881-1.016 1.393-2.691
+                      1.565-5.123.135-1.917.01-3.828-.14-4.88-.122-.866-.297-1.775-.724-2.59 1.82-.081 4.258.048 5.803.27.14.764.049
+                      2.267-.04 3.72-.214 3.513-.435 7.137 1.424 8.832.327.298.674.458.684.465l.946.29c.365-.112 2.48.96 6.483-6.027
+                      1.283-2.239 2.477-4.819 3.12-6.504 1.492-.003 6.574.003 7.17.004-.845 1.86-2.85 4.515-4.16 6.277-1.141
+                      1.536-2.127 2.863-2.706 3.879-1.075 1.888-.894 3.57.225 5.055l.018.023c.625.795 2.168 2.267 2.488 2.564
+                      2.319 2.251 3.436 3.868 3.968 4.955H41.1z" fill="#2E2F22"/>
+                  </svg>
+                  <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
             </ul>
           </div>
-          <a class="article__link" href="#">Ко всем статьям</a>
+          <a class="article__link" href="index.html#articles" aria-label="Перейдя по этой ссылке, вы попадете в раздел сайта все статьи">Ко всем статьям
+            <svg aria-hidden="true" role="presntation" focusable="false" width="64" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M62.78 8.707a1 1 0 000-1.414L56.416.929a1 1 0 10-1.414 1.414L60.657 8l-5.657 5.657a1 1 0
+                101.415 1.414l6.364-6.364zM0 9h62.072V7H0v2z" fill="#2E2F22"/>
+            </svg>
+          </a>
         </footer>
       </section>
       <section class="user-comments">
         <h2 class="visually-hidden">Комментарии наших читателей </h2>
         <ul class="user-comments__list">
           <li class="user-comments__item">
-            <blockquote >
-              <img src="img/avatar-comment@1x.jpg" alt="На аватарке Иван Петров">
+            <blockquote>
+              <picture>
+                <source type="image/webp" srcset="img/user-ava-1@1x.webp 1x, img/user-ava-1@2x.webp 2x">
+                <img src="img/user-ava-1@1x.jpg" srcset="img/user-ava-1@2x.jpg 2x" alt="На аватарке Иван Петров">
+              </picture>
               <cite class="user-comments__autor">Иван Петров</cite>
               <p class=" user-comments__text">Отличная статья! Спасибо.</p>
             </blockquote>
           </li>
           <li class="user-comments__item">
             <blockquote>
-              <img src="" alt="На аватарке Иван Петров">
+              <picture>
+                <source type="image/webp" srcset="img/user-ava-2@1x.webp 1x, img/user-ava-2@2x.webp 2x">
+                <img src="img/user-ava-2@1x.jpg" srcset="img/user-ava-2@2x.jpg 2x" alt="На аватарке Иван Петров">
+              </picture>
               <cite class="user-comments__autor">Ксения Ксения</cite>
               <p class=" user-comments__text">Отличный текст, добавила в закладки.</p>
             </blockquote>
           </li>
           <li class="user-comments__item">
             <blockquote>
-              <img src="" alt="На аватарке Иван Петров">
+              <picture>
+                <source type="image/webp" srcset="img/user-ava-3@1x.webp 1x, img/user-ava-3@2x.jpg 2x">
+                <img src="img/user-ava-3@1x.jpg" srcset="img/user-ava-3@2x.jpg 2x" alt="На аватарке Иван Петров">
+              </picture>
               <cite class="user-comments__autor">Иван Иванов</cite>
               <p class=" user-comments__text">Основательный материал! Можешь посоветовать какие-то книги на эту тему?</p>
             </blockquote>
           </li>
         </ul>
-        <form class="user-comments__form form-comments" action="" method="GET">
+        <form class="user-comments__form form-comments" action="https://echo.htmlacademy.ru" method="GET">
           <fieldset>
-            <legend class="form-comments__title">Оставить комментарии</legend>
+            <legend class="form-comments__title">Оставить комментарий</legend>
             <div class="form-comments__layout">
               <div class="form-comments__layout-elem">
                 <p class="form-comments__element">
                   <label for="id-comment-name">Имя</label>
-                  <input id="id-comment-name" type="text" name="comment-name">
+                  <input id="id-comment-name" type="text" name="comment-name" placeholder="Иван Иванов" required pattern="([A-Za-zА-Яа-яЁё]{2,20})+\s([A-Za-zА-Яа-яЁё]{2,20})">
                 </p>
                 <p class="form-comments__element">
                   <label for="id-comment-email">Почта</label>
-                  <input id="id-comment-email" type="email" name="comment-email">
+                  <input id="id-comment-email" type="email" name="comment-email" required placeholder="google@gmail.com">
                 </p>
-                <button type="button">Отправить</button>
+                <button class="button form-comments__button" type="submit">Отправить</button>
               </div>
-              <textarea name="comments-user" cols="30" rows="10" placeholder="Написать комментарий..."></textarea>
+              <textarea name="comments-user" cols="30" rows="5" placeholder="Написать комментарий..."></textarea>
             </div>
           </fieldset>
         </form>
@@ -145,16 +233,16 @@
   <footer class="main-footer">
     <ul class="wrapper main-footer__list">
       <li class="main-footer__items">
-        <a class="main-footer__link" href="#"><span class="">Вк</span></a>
+        <a class="main-footer__link" href="https://vk.com" aria-label="Моя страничка в социальной сети в контакте" target="_blank"><span class="">Вк</span></a>
       </li>
       <li class="main-footer__items">
-        <a class="main-footer__link" href="#"><span class="">Телеграм</span></a>
+        <a class="main-footer__link" href="https://web.telegram.org/#/login" aria-label="Моя страничка в социальной сети в телеграм" target="_blank"><span class="">Телеграм</span></a>
       </li>
       <li class="main-footer__items">
-        <a class="main-footer__link" href="#"><span class="">Инстаграм</span></a>
+        <a class="main-footer__link" href="https://www.instagram.com/" aria-label="Моя страничка в социальной сети в инстаграм" target="_blank"><span class="">Инстаграм</span></a>
       </li>
       <li class="main-footer__items">
-        <a class="main-footer__link" href="#"><span class="">Твиттер</span></a>
+        <a class="main-footer__link" href="https://twitter.com" aria-label="Моя страничка в социальной сети в твиттер" target="_blank"><span class="">Твиттер</span></a>
       </li>
     </ul>
   </footer>

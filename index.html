@@ -33,24 +33,35 @@
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Главная страница личного блока Анны Свит</h1>
-     <section class="articles">
+     <section class="articles-main">
        <div class="articles__layout wrapper">
          <div class="articles__layout-head">
            <h2 id="articles" class="header header-article">Все статьи</h2>
            <ul class="articles__theme theme__lists">
-             <li class="theme__items" tabindex="0"><a aria-label="Фильтр по категориям статей">Выбрать тему</a>
+             <li class="theme__items" tabindex="0">
+               <a class="theme__items-link" data-category="all" aria-label="Фильтр по категориям статей">Выбрать тему</a>
                <ul class="theme__list">
-                 <li class="theme__item"><a href="#" aria-label="Все статьи с категорией город">Город</a></li>
-                 <li class="theme__item"><a href="#" aria-label="Все статьи с категорией книги">Книги</a></li>
-                 <li class="theme__item"><a href="#" aria-label="Все статьи с категорией путешествия">Путешествия</a></li>
-                 <li class="theme__item"><a href="#" aria-label="Все статьи с категорией рецепты">Рецепты</a></li>
-                 <li class="theme__item"><a href="#" aria-label="Все статьи с категорией фотографии">Фотографии</a></li>
+                 <li class="theme__item">
+                   <a class="theme__items-link" data-category="city" href="#" aria-label="Все статьи с категорией город">Город</a>
+                  </li>
+                 <li class="theme__item">
+                   <a class="theme__items-link" data-category="books" href="#" aria-label="Все статьи с категорией книги">Книги</a
+                  </li>
+                 <li class="theme__item">
+                   <a class="theme__items-link" data-category="travels" href="#" aria-label="Все статьи с категорией путешествия">Путешествия</a>
+                  </li>
+                 <li class="theme__item">
+                   <a class="theme__items-link" href="#" aria-label="Все статьи с категорией рецепты">Рецепты</a>
+                  </li>
+                 <li class="theme__item">
+                   <a class="theme__items-link" href="#" aria-label="Все статьи с категорией фотографии">Фотографии</a>
+                  </li>
                </ul>
              </li>
            </ul>
          </div>
         <ul class="articles article__list">
-          <li class="article__items">
+          <li class="article__items" data-category="travels">
             <a class="article__item" href="articles.html" arial-label="Перейдя по ссылка, вы попадете на статью Путешествие в Берлин в августе">
               <picture>
                 <source type="image/webp" srcset="img/image-1@1x.webp 1x, img/image-1@2x.webp 2x">
@@ -64,7 +75,7 @@
               </div>
             </a>
           </li>
-          <li class="article__items">
+          <li class="article__items" data-category="city">
             <a class="article__item" href="articles.html" arial-label="Перейдя по ссылка, вы попадете на статью Где выпить колдбрю в Москве">
               <picture>
                 <source type="image/webp" srcset="img/image-2@1x.webp 1x, img/image-2@2x.webp 2x">
@@ -78,7 +89,7 @@
               </div>
             </a>
           </li>
-          <li class="article__items">
+          <li class="article__items" data-category="books">
             <a class="article__item" href="articles.html" arial-label="Перейдя по ссылка, вы попадете на статью Прочитано: книжные рекомендации">
               <picture>
                 <source type="image/webp" srcset="img/image-3@1x.webp 1x, img/image-3@2x.webp 2x">
@@ -92,7 +103,9 @@
               </div>
             </a>
           </li>
-          <li class="article__items article__items--big">
+        </ul>
+        <ul class="articles article__list-big">
+          <li class="article__items-big">
             <a class="article__item" href="articles.html" arial-label="Перейдя по ссылка, вы попадете на статью Снимки на плёнку">
               <picture>
                 <source type="image/webp" srcset="img/image-4@1x.webp 1x, img/image-4@2x.webp 2x">
@@ -108,7 +121,7 @@
               </div>
             </a>
           </li>
-          <li class="article__items article__items--big">
+          <li class="article__items-big">
             <a class="article__item" href="articles.html" arial-label="Перейдя по ссылка, вы попадете на статью Домашний чизкейк">
               <picture>
                 <source type="image/webp" srcset="img/image-5@1x.webp 1x, img/image-5@2x.webp 2x">
@@ -200,15 +213,18 @@
               <div class="feedback__layout-elm">
                 <p class="feedback__form-elment">
                   <label for="id-name">Ваше имя</label>
-                  <input id="id-name" type="text" name="name" placeholder="Иван Иванов" required pattern="([A-Za-zА-Яа-яЁё]{2,20})+\s([A-Za-zА-Яа-яЁё]{2,20})">
+                  <span class="text-name">Иван Иванов</span>
+                  <input id="id-name" class="feedback__name" type="text" name="name" placeholder="Иван Иванов" required pattern="([A-Za-zА-Яа-яЁё]{2,10})+\s([A-Za-zА-Яа-яЁё]{2,10})">
                 </p>
                 <p class="feedback__form-elment">
                   <label for="id-email">Email</label>
-                  <input id="id-email" type="email" name="e-mail" placeholder="google@gmail.com" required>
+                  <span class="text-email">google@gmail.com</span>
+                  <input id="id-email" class="feedback__email" type="email" name="e-mail" placeholder="google@gmail.com" required>
                 </p>
                 <p class="feedback__form-elment feedback__form-elment--messege">
                   <label for="id-message">Сообщение</label>
-                  <textarea id="id-message" placeholder="Напишите здесь ваше сообщение."></textarea>
+                  <span class="text-counter">Использовано <output class="char-counter" for="id-message">0</output>/500 символов</span>
+                  <textarea id="id-message" class="message-counter" name="message" placeholder="Напишите здесь ваше сообщение."></textarea>
                 </p>
               </div>
               <button class="button feedback__button" type="submit">отправить</button>
@@ -234,5 +250,94 @@
       </li>
     </ul>
   </footer>
+  <section class="button-up">
+    <button class="button-up__button"><span class="visually-hidden">В саммый верх</span></button>
+  </section>
+  <script>
+    let links = document.querySelectorAll(".theme__items-link");
+    let articles = document.querySelectorAll(".article__items");
+    let linki = links[0].dataset.category;
+
+    for (let link of links) {
+      link.onclick = function (evt) {
+        evt.preventDefault();
+        linki = link.dataset.category;
+      }
+    };
+  </script>
+  <script>
+    let commentForm = document.querySelector(".feedback__form");
+    let messageCounter = document.querySelector(".message-counter");
+    let charCounter = document.querySelector(".char-counter");
+    let feedbackButton = document.querySelector(".feedback__button");
+    let feedbackName = document.querySelector(".feedback__name");
+    let feedbackEmail = document.querySelector(".feedback__email")
+    let textName = document.querySelector(".text-name");
+    let textEmail = document.querySelector(".text-email");
+
+    commentForm.onsubmit = function (evt) {
+      evt.preventDefault();
+      textName.style.display = "none";
+      textEmail.style.display = "none";
+      charCounter.textContent = 0;
+      messageCounter.value = "";
+      feedbackName.value = "";
+      feedbackEmail.value = "";
+    }
+
+    messageCounter.oninput = function () {
+      charCounter.textContent = messageCounter.value.length;
+      if (messageCounter.value.length > 500) {
+        commentForm.classList.add("warning");
+        feedbackButton.disabled = true;
+      } else {
+        commentForm.classList.remove("warning");
+        feedbackButton.disabled = false;
+      }
+    };
+
+    feedbackName.oninput = function () {
+      if (feedbackName.value.length < 2 || feedbackName.value.length > 21) {
+        commentForm.classList.add("text-war");
+        feedbackButton.disabled = true;
+        textName.style.display = "inline";
+      } else {
+        commentForm.classList.remove("text-war");
+        feedbackButton.disabled = false;
+      }
+      if (feedbackName.value.length < 1) {
+        textName.style.display = "none";
+      }
+    };
+
+    feedbackEmail.oninput = function () {
+      if (feedbackEmail.value.length < 6 || feedbackEmail.value.length > 30) {
+        textEmail.style.display = "inline";
+        commentForm.classList.add("text-war");
+        feedbackButton.disabled = true;
+      } else {
+        commentForm.classList.remove("text-war");
+        feedbackButton.disabled = false;
+      }
+      if (feedbackEmail.value.length < 1) {
+        textEmail.style.display = "none";
+      }
+    };
+  </script>
+  <script>
+    let upButton = document.querySelector(".button-up__button");
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 550) {
+        upButton.classList.add("button-up__shown");
+      } else {
+        upButton.classList.remove("button-up__shown");
+      }
+    };
+
+    upButton.onclick = function () {
+      window.scrollTo(0,0);
+    }
+  </script>
 </body>
 </html>

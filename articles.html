@@ -82,7 +82,7 @@
         </div>
         <footer class="article-footer">
           <div class="article__footer-layout">
-            <a class="article__footer-link" href="#">
+            <a class="article__footer-link link-like" href="#">
               <svg class="article__footer-icon" aria-hidden="true" role="presntation" focusable="false" width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M47.843 33.992c1.025-1.307 1.517-2.708
                   1.454-4.15-.063-1.59-.774-2.834-1.36-3.598.68-1.694.942-4.36-1.327-6.43-1.663-1.516-4.486-2.196-8.396-2.008-2.75.126-5.05.638-5.145.66h-.01c-.523.093-1.077.208-1.642.334-.042-.67.073-2.332
@@ -178,34 +178,34 @@
         <h2 class="visually-hidden">Комментарии наших читателей </h2>
         <ul class="user-comments__list">
           <li class="user-comments__item">
-            <blockquote>
+            <blockquote class="user-comments__wrapp">
               <picture>
                 <source type="image/webp" srcset="img/user-ava-1@1x.webp 1x, img/user-ava-1@2x.webp 2x">
                 <img src="img/user-ava-1@1x.jpg" srcset="img/user-ava-1@2x.jpg 2x" alt="На аватарке Иван Петров">
               </picture>
               <cite class="user-comments__autor">Иван Петров</cite>
-              <p class=" user-comments__text">Отличная статья! Спасибо.</p>
+              <p class="user-comments__text">Отличная статья! Спасибо.</p>
             </blockquote>
           </li>
           <li class="user-comments__item">
-            <blockquote>
+            <blockquote class="user-comments__wrapp">
               <picture>
                 <source type="image/webp" srcset="img/user-ava-2@1x.webp 1x, img/user-ava-2@2x.webp 2x">
                 <img src="img/user-ava-2@1x.jpg" srcset="img/user-ava-2@2x.jpg 2x" alt="На аватарке Иван Петров">
               </picture>
               <cite class="user-comments__autor">Ксения Ксения</cite>
-              <p class=" user-comments__text">Отличный текст, добавила в закладки.</p>
+              <p class="user-comments__text">Отличный текст, добавила в закладки.</p>
             </blockquote>
           </li>
           <li class="user-comments__item">
-            <blockquote>
+            <blockquote class="user-comments__wrapp">
               <picture>
                 <source type="image/webp" srcset="img/user-ava-3@1x.webp 1x, img/user-ava-3@2x.jpg 2x">
                 <img src="img/user-ava-3@1x.jpg" srcset="img/user-ava-3@2x.jpg 2x" alt="На аватарке Иван Петров">
               </picture>
               <cite class="user-comments__autor">Иван Иванов</cite>
-              <p class=" user-comments__text">Основательный материал! Можешь посоветовать какие-то книги на эту тему?</p>
-            </blockquote>
+              <p class="user-comments__text">Основательный материал! Можешь посоветовать какие-то книги на эту тему?</p>
+            </blockquote >
           </li>
         </ul>
         <form class="user-comments__form form-comments" action="https://echo.htmlacademy.ru" method="GET">
@@ -215,15 +215,18 @@
               <div class="form-comments__layout-elem">
                 <p class="form-comments__element">
                   <label for="id-comment-name">Имя</label>
-                  <input id="id-comment-name" type="text" name="comment-name" placeholder="Иван Иванов" required pattern="([A-Za-zА-Яа-яЁё]{2,20})+\s([A-Za-zА-Яа-яЁё]{2,20})">
+                  <span class="text-name">Иван Иванов</span>
+                  <input id="id-comment-name" class="comment-name__autor" type="text" name="comment-name" placeholder="Иван Иванов" required pattern="([A-Za-zА-Яа-яЁё]{2,20})+\s([A-Za-zА-Яа-яЁё]{2,20})">
                 </p>
                 <p class="form-comments__element">
                   <label for="id-comment-email">Почта</label>
-                  <input id="id-comment-email" type="email" name="comment-email" required placeholder="google@gmail.com">
+                  <span class="text-email">google@gmail.com</span>
+                  <input id="id-comment-email" class="comment-email" type="email" name="comment-email" required placeholder="google@gmail.com">
                 </p>
                 <button class="button form-comments__button" type="submit">Отправить</button>
               </div>
-              <textarea name="comments-user" cols="30" rows="5" placeholder="Написать комментарий..."></textarea>
+              <textarea class="form-comments__user" name="comments-user" cols="30" rows="5" placeholder="Написать комментарий..."></textarea>
+              <span class="form-comment__text-counter">Использовано <output class="form-comment__char-counter">0</output>/142 символа</span>
             </div>
           </fieldset>
         </form>
@@ -246,5 +249,141 @@
       </li>
     </ul>
   </footer>
+  <section class="button-up">
+    <button class="button-up__button"><span class="visually-hidden">В саммый верх</span></button>
+  </section>
+  <script>
+    let upButton = document.querySelector(".button-up__button");
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 550) {
+        upButton.classList.add("button-up__shown");
+      } else {
+        upButton.classList.remove("button-up__shown");
+      }
+    };
+
+    upButton.onclick = function () {
+      window.scrollTo(0,0);
+    }
+  </script>
+  <script>
+    let linkLike = document.querySelector(".link-like");
+    let articlFooterText = document.querySelector(".article__footer-text");
+    let counter = 0;
+
+    linkLike.onclick = function (evt) {
+      evt.preventDefault();
+      if (linkLike.classList.contains("like")) {
+        articlFooterText.textContent--;
+      } else {
+        articlFooterText.textContent++;
+      }
+      linkLike.classList.toggle("like");
+    }
+  </script>
+  <script>
+    let userCommentsList = document.querySelector(".user-comments__list");
+    let formComments = document.querySelector(".user-comments__form");
+    let commentsUser = document.querySelector(".form-comments__user");
+    let commentAutor = document.querySelector(".comment-name__autor");
+    let commentEmail = document.querySelector(".comment-email");
+    let commentTextCounter = document.querySelector(".form-comment__text-counter");
+    let commentCharCounter = document.querySelector(".form-comment__char-counter");
+    let commentsButton = document.querySelector(".form-comments__button");
+    let textName = document.querySelector(".text-name");
+    let textEmail = document.querySelector(".text-email");
+
+    formComments.onsubmit = function (evt) {
+      evt.preventDefault();
+      let newComment = document.createElement("li");
+      newComment.classList.add("user-comments__item");
+
+      let userCommentsWrapp = document.createElement("blockquote");
+      userCommentsWrapp.classList.add("user-comments__wrapp");
+
+      let userCommentPicture = document.createElement("picture");
+
+      let userCommentSource = document.createElement("source");
+      userCommentSource.setAttribute("type", "image/webp");
+      userCommentSource.setAttribute("srcset", "img/user-no-login@1x.webp 1x, img/user-no-login@2x.webp 2x");
+
+      let usetCommentImg = document.createElement("img");
+      usetCommentImg.setAttribute("src", "img/user-no-login@1x.jpg");
+      usetCommentImg.setAttribute("srcset", "img/user-no-login@2x.jpg 2x");
+      usetCommentImg.setAttribute("alt", "На аватарке");
+
+      let autorComment = document.createElement("cite");
+      autorComment.classList.add("user-comments__autor");
+
+      let userCommentsText = document.createElement("p");
+      userCommentsText.classList.add("user-comments__text");
+
+      autorComment.textContent = commentAutor.value;
+      commentAutor.value = "";
+
+      userCommentsText.textContent = commentsUser.value;
+      commentsUser.value = "";
+      commentEmail.value = "";
+
+
+      userCommentsWrapp.append(userCommentPicture);
+      userCommentPicture.append(userCommentSource);
+      userCommentPicture.append(usetCommentImg);
+      userCommentsWrapp.append(autorComment);
+      userCommentsWrapp.append(userCommentsText);
+      newComment.append(userCommentsWrapp)
+
+      userCommentsList.append(newComment);
+      textName.style.display = "none";
+      textEmail.style.display = "none";
+      commentCharCounter.textContent = 0;
+    };
+
+    commentsUser.oninput = function () {
+      commentCharCounter.textContent = commentsUser.value.length;
+      if (commentsUser.value.length > 142) {
+        formComments.classList.add("warning");
+        commentsButton.disabled = true;
+      } else {
+        formComments.classList.remove("warning");
+        commentsButton.disabled = false;
+      }
+    };
+
+    commentAutor.oninput = function () {
+      if (commentAutor.value.length < 2 || commentAutor.value.length > 21) {
+        formComments.classList.add("text-war");
+        commentsButton.disabled = true;
+        textName.style.display = "inline";
+        textName.style.position = "absolute";
+        textName.style.top = "-25px";
+        textName.style.left = "95px";
+      } else {
+        formComments.classList.remove("text-war");
+        commentsButton.disabled = false;
+      }
+      if (commentAutor.value.length < 1) {
+        textName.style.display = "none";
+      }
+    };
+
+    commentEmail.oninput = function () {
+      if (commentEmail.value.length < 6 || commentEmail.value.length > 30) {
+        formComments.classList.add("text-war");
+        commentsButton.disabled = true;
+        textEmail.style.display = "inline";
+        textEmail.style.position = "absolute";
+        textEmail.style.top = "-25px";
+        textEmail.style.left = "90px";
+      } else {
+        formComments.classList.remove("text-war");
+        commentsButton.disabled = false;
+      }
+      if (commentEmail.value.length < 1) {
+        textEmail.style.display = "none";
+      }
+    };
+  </script>
 </body>
 </html>

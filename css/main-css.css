@@ -35,6 +35,12 @@ img {
   margin: 0 auto;
 }
 
+/* .button-up {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+} */
+
 .header {
   margin: 0;
   font-family: "Spectral SC", serif;
@@ -51,6 +57,27 @@ img {
   background-color: rgba(0, 0, 0, 0.0);
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.button-up__button {
+  position: fixed;
+  display: none;
+  right: 125px;
+  bottom: 195px;
+  width: 50px;
+  height: 50px;
+  background-color: #D7D1C9;
+  background-image: url("../img/triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  border: 1px solid #000000;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-up__shown {
+  display: inline-block;
 }
 
 .page-header {
@@ -120,7 +147,7 @@ img {
 /* main index*/
 /* index articles */
 
-.articles {
+.articles-main {
   margin-bottom: 85px;
 }
 
@@ -177,7 +204,7 @@ img {
 }
 
 .theme__item:first-child {
-  padding-top: 10px;
+  /* padding-top: 10px; */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -218,27 +245,43 @@ img {
   z-index: 5;
 }
 
-.article__list {
+.articles {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.article__list-big {
+  margin-bottom: 44px;
+}
+
 .article__items {
   display: flex;
   width: 387px;
+  margin-right: calc(20px - 0.5px);
   margin-bottom: 62px;
 }
 
-.article__items--big {
-  width: 590px;
-  margin-bottom: 106px;
+.article__items:nth-child(3n) {
+  margin-right: 0;
 }
 
-.article__items--big > .article__item {
+.article__items-big {
+  display: flex;
+  width: 387px;
+  margin-right: auto;
+  margin-bottom: 62px;
+  width: 590px;
+}
+
+.article__items-big:nth-child(2n) {
+  margin-right: 0;
+}
+
+.article__items-big > .article__item {
   color: #ffffff;
 }
 
@@ -254,7 +297,7 @@ img {
   margin-bottom: 28px;
 }
 
-.article__items--big > a > picture {
+.article__items-big > a > picture {
   margin-bottom: 0px;
 }
 
@@ -534,11 +577,28 @@ img {
 }
 
 .feedback__form-elment > label{
-  display: block;
   margin-bottom: 12px;
+  margin-right: 20px;
   font-family: "Spectral SC", serif;
   font-size: 18px;
   line-height: 28px;
+}
+
+.text-counter {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.text-name {
+  display: none;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.text-email {
+  display: none;
+  font-style: italic;
+  font-size: 14px;
 }
 
 .feedback__form-elment > input,
@@ -566,6 +626,25 @@ img {
   padding-right: 64px;
 }
 
+.feedback__button[disabled],
+.form-comments__button[disabled] {
+  border-color: rgba(0, 0, 0, 0.15);
+  cursor: default;
+}
+
+.text-war .feedback__name,
+.text-war .feedback__email,
+.text-war .comment-name__autor,
+.text-war .comment-email {
+  color: red;
+}
+
+.warning .message-counter,
+.warning .char-counter,
+.warning .form-comments__user,
+.warning .form-comment__char-counter {
+  color: red;
+}
 
 /* articles */
 
@@ -687,35 +766,50 @@ img {
   min-height: 429px;
   margin: 0px;
   margin-bottom: 78px;
-  padding: 0px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 0px;
   padding-left: 102px;
   list-style: none;
   background-color: #ECE1E1;
   border-radius: 10px;
 }
 
+.user-comments__item {
+  margin-bottom: 15px;
+}
+
+.user-comments__item:last-child {
+  margin-bottom: 0;
+}
+
+
 .user-comments__item img {
   vertical-align: middle;
   width: 50px;
   height: 50px;
+  margin-right: 10px;
   border-radius: 10px;
 }
 
 .user-comments__item blockquote{
   margin: 0px;
   padding: 0px;
+  font-size: 0px;
 }
 
 .user-comments__autor {
   line-height: 21px;
   font-weight: 700;
   font-style: normal;
+  font-size: 16px;
 }
 
 .user-comments__text {
   margin: 0;
   margin-top: 15px;
   line-height: 21px;
+  font-size: 16px;
 }
 
 .user-comments__form fieldset {
@@ -733,8 +827,9 @@ img {
 }
 
 .form-comments__layout {
-  justify-content: space-between;
+  position: relative;
   display: flex;
+  justify-content: space-between;
 }
 
 .form-comments__layout-elem {
@@ -745,6 +840,7 @@ img {
 }
 
 .form-comments__element {
+  position: relative;
   display: flex;
   align-items: baseline;
   margin: 0;
@@ -755,6 +851,10 @@ img {
 
 .form-comments__element > label {
   margin-right: 15px;
+}
+
+.form-comments__element:nth-child(1) > label {
+  margin-right: 29px;
 }
 
 .form-comments__element > input {
@@ -776,7 +876,16 @@ img {
   padding: 20px 19px;
   resize: vertical;
   box-sizing: border-box;
+  border: 1px solid #000000;
   border-radius: 10px;
+}
+
+.form-comment__text-counter {
+  position: absolute;
+  right: 114px;
+  bottom: -30px;
+  font-size: 14px;
+  font-style: italic;
 }
 
 /* footer */
